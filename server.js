@@ -32,7 +32,7 @@ const config = {
   auth0Logout: true
 };
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 if (!config.baseURL && !process.env.BASE_URL && process.env.PORT && process.env.NODE_ENV !== 'production') {
   config.baseURL = `http://207.246.73.27:${port}`;
 }
