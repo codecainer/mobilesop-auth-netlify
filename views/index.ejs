@@ -4,10 +4,8 @@
 
 <% if (locals.isAuthenticated) { %>
     <p>You are logged in. <a href="/profile" class="underline">View your profile</a>.</p>
-    <p>You are logged in. <a href="/home" class="underline">Go To MobileSOP</a>.</p>
 <% } else { %>
     <p>You are not logged in. <a href="/login" class="underline">Login</a>.</p>
 <% } %>
-    <p>You are not logged in. <a href="/stations" class="underline">Stations</a>.</p>
 
 <%- include('partials/footer') -%>

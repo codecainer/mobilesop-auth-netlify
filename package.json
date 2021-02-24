@@ -2,7 +2,6 @@
   "name": "auth0-express-webapp-sample",
   "scripts": {},
   "dependencies": {
-    "cors": "^2.8.5",
     "debug": "~2.6.9",
     "dotenv": "^6.1.0",
     "ejs": "^2.7.4",

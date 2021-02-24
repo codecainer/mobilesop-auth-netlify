@@ -5,7 +5,6 @@ const logger = require('morgan');
 const path = require('path');
 const router = require('./routes/index');
 const { auth } = require('express-openid-connect');
-const cors = require('cors');
 
 dotenv.load();
 
@@ -14,17 +13,8 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.use(cors())
 app.use(logger('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static('images'));
-app.use(express.static('css'));
-app.use(express.static('js'));
-app.use(express.static('fonts'));
-app.use(express.static('app'));
-app.use(express.static('webfonts'));
-app.use('/static', express.static('public'))
-
 app.use(express.json());
 
 const config = {
@@ -34,7 +24,7 @@ const config = {
 
 const port = process.env.PORT || 3000;
 if (!config.baseURL && !process.env.BASE_URL && process.env.PORT && process.env.NODE_ENV !== 'production') {
-  config.baseURL = `https://youthful-wozniak-66ca57.netlify.app:${port}`;
+  config.baseURL = `http://mobileappshowcase.com:${port}`;
 }
 
 app.use(auth(config));
