@@ -34,7 +34,7 @@ const config = {
 
 const port = process.env.PORT || 3000;
 if (!config.baseURL && !process.env.BASE_URL && process.env.PORT && process.env.NODE_ENV !== 'production') {
-  config.baseURL = `http://207.246.73.27:${port}`;
+  config.baseURL = `https://youthful-wozniak-66ca57.netlify.app:${port}`;
 }
 
 app.use(auth(config));
